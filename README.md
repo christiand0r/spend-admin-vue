@@ -22,7 +22,7 @@ Bienvenido a la aplicación de gestión de gastos. Esta pequeña aplicación te 
 
 ## Requisitos y dependencias
 
-Asegúrate de tener instalado [Node.js](https://nodejs.org/) y [npm](https://pnpm.io/) para poder ejecutar la aplicación.
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) y [pnpm](https://pnpm.io/) para poder ejecutar la aplicación.
 
 ## Instalación
 
@@ -41,13 +41,13 @@ Asegúrate de tener instalado [Node.js](https://nodejs.org/) y [npm](https://pnp
 3. Instala las dependencias.
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 4. Inicia la aplicación.
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ## Créditos
