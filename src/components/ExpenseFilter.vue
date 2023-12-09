@@ -18,12 +18,12 @@ const clearFilterCategory = () => {
 
 <template>
   <div class="mb-4">
-    <form class="flex items-center justify-between">
+    <form class="flex items-stretch justify-between md:items-center">
       <select
         ref="select"
         id="category-filter"
         name="category-filter"
-        class="flex-auto px-6 py-2 border rounded-tl-lg rounded-bl-lg outline-none bg-gray-200 border-gray-200"
+        class="flex-auto px-6 py-2 border rounded-tl-lg rounded-bl-lg outline-none w-full bg-gray-200 border-gray-200"
         @change="setFilterCategory"
       >
         <option value="" hidden selected>
