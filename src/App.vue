@@ -17,7 +17,7 @@ onMounted(() => {
   if (!finance) return;
 
   budget.value = finance.budget;
-  expenses.value = finance.expenses;
+  expenses.value = finance?.expenses || [];
 });
 
 watch(expenses, () => {
