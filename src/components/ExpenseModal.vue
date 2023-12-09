@@ -99,10 +99,11 @@ const registerSpent = (e) => {
       <div class="flex flex-col gap-2">
         <label class="font-bold text-xs uppercase text-white">Concepto</label>
         <input
+          ref="conceptInput"
           type="text"
           id="concept"
           name="concept"
-          :value="expense?.concept || ''"
+          :value="expense?.concept || $refs?.conceptInput?.value"
           autocomplete="new-password"
           placeholder="Ingrese el concepto del gasto"
           class="px-2 py-1 border outline-none rounded-md w-full"
@@ -116,10 +117,11 @@ const registerSpent = (e) => {
       <div class="flex flex-col gap-2">
         <label class="font-bold text-xs uppercase text-white">Monto</label>
         <input
+          ref="amountInput"
           type="number"
           id="amount"
           name="amount"
-          :value="expense?.amount || ''"
+          :value="expense?.amount || $refs?.amountInput?.value"
           autocomplete="new-password"
           placeholder="Ingrese el monto del gasto"
           class="px-2 py-1 border outline-none rounded-md w-full"
@@ -133,9 +135,10 @@ const registerSpent = (e) => {
       <div class="flex flex-col gap-2">
         <label class="font-bold text-xs uppercase text-white">Categoría</label>
         <select
+          ref="categoryInput"
           id="category"
           name="category"
-          :value="expense?.category || ''"
+          :value="expense?.category || $refs?.categoryInput?.value"
           class="px-2 py-1 border outline-none rounded-md w-full"
           :class="[errors?.category ? 'border-red-400' : '']"
         >
