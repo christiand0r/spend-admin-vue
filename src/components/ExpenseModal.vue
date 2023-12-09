@@ -121,6 +121,7 @@ const registerSpent = (e) => {
           type="number"
           id="amount"
           name="amount"
+          inputmode="numeric"
           :value="expense?.amount || $refs?.amountInput?.value"
           autocomplete="new-password"
           placeholder="Ingrese el monto del gasto"
