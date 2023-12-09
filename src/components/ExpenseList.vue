@@ -12,12 +12,16 @@ const expenseList = ref();
 
 // Calculate height of expenses list
 const computedHeightList = () => {
+  const mql = window.matchMedia("(min-width: 640px)");
+
   const { top } = expenseList.value.getBoundingClientRect();
-  expenseList.value.style.setProperty("height", `calc(100vh - ${top}px)`);
+
+  mql.matches
+    ? expenseList.value.style.setProperty("height", `calc(100vh - ${top}px)`)
+    : expenseList.value.style.removeProperty("height");
 };
 
 onMounted(() => {
-  console.log(expenseList.value)
   if (!expenseList.value) return;
 
   computedHeightList();
