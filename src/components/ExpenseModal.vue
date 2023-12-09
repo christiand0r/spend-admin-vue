@@ -118,9 +118,10 @@ const registerSpent = (e) => {
         <label class="font-bold text-xs uppercase text-white">Monto</label>
         <input
           ref="amountInput"
-          type="number"
           id="amount"
+          type="number"
           name="amount"
+          pattern="[0-9]*"
           inputmode="decimal"
           :value="expense?.amount || $refs?.amountInput?.value"
           autocomplete="new-password"
